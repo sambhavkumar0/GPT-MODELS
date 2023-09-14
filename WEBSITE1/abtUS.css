@@ -1,0 +1,25 @@
+
+.members {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 5px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0077b5; /* LinkedIn blue, you can change the color */
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
