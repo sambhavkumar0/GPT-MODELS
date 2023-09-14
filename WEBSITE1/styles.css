@@ -80,6 +80,17 @@ nav {
     background-color: #555; /* Background color on hover */
 }
 
+.navbar .logo {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px; /* Set the width of the logo image */
+    height: 50px; /* Set the height of the logo image */
+    vertical-align: middle;
+}
+
 .message {
     text-align: center;
     margin: 20px;
