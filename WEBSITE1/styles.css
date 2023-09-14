@@ -1,0 +1,107 @@
+/* Basic styling - Customize as needed */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333; /* Background color for the navbar */
+}
+
+.navbar {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left; /* Display list items horizontally */
+}
+
+.navbar li a {
+    display: block;
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 14px 16px; /* Spacing around the links */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Style for links when hovered over */
+.navbar li a:hover {
+    background-color: #555; /* Background color on hover */
+}
+
+.message {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.message img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.message h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.message p {
+    color: #666;
+    font-size: 16px;
+}

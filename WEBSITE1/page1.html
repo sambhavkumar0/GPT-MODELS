@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <section id="calculator">
+        <h2>Calculate Your Water Footprint</h2>
+        <form id="calculator-form">
+
+            <label for="state-dropdown">Select an Indian State:</label>
+            <select id="state-dropdown">
+                <option value="0">Andhra Pradesh</option>
+                <option value="1">Arunachal Pradesh</option>
+                <option value="2">Assam</option>
+                <option value="3">Bihar</option>
+                <option value="4">Chhattisgarh</option>
+                <option value="5">Goa</option>
+                <option value="6">Gujarat</option>
+                <option value="7">Haryana</option>
+                <option value="8">Himachal Pradesh</option>
+                <option value="9">Jharkhand</option>
+                <option value="10">Karnataka</option>
+                <option value="11">Kerala</option>
+                <option value="12">Madhya Pradesh</option>
+                <option value="13">Maharashtra</option>
+                <option value="14">Manipur</option>
+                <option value="15">Meghalaya</option>
+                <option value="16">Mizoram</option>
+                <option value="17">Nagaland</option>
+                <option value="18">Odisha</option>
+                <option value="19">Punjab</option>
+                <option value="20">Rajasthan</option>
+                <option value="21">Sikkim</option>
+                <option value="22">Tamil Nadu</option>
+                <option value="23">Telangana</option>
+                <option value="24">Tripura</option>
+                <option value="25">Uttar Pradesh</option>
+                <option value="26">Uttarakhand</option>
+                <option value="27">West Bengal</option>
+                <option value="28">Andaman and Nicobar Islands</option>
+                <option value="29">Chandigarh</option>
+                <option value="30">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="31">Lakshadweep</option>
+                <option value="32">Delhi</option>
+                <option value="33">Puducherry</option>
+            </select>
+            <button type="button" id="display-btn">Display Selected State</button>
+        </form>
+    
+        <div id="selected-state"></div>           
+        <label for="state">Your State:</label>
+        <input type="text" id="state" required><br><br>
+
+        <label for="water-consumption">Liters of Water Consumed in a Day:</label>
+        <input type="number" id="water-consumption" required><br><br>
+
+        <label for="shower-time">Time Spent in Showers and Bathrooms (minutes):</label>
+        <input type="number" id="shower-time" required><br><br>
+
+        <label for="diet">Type of Diet:</label>
+        <select id="diet">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="omnivore">Omnivore</option>
+        </select><br><br>
+
+        <label for="extra-tasks">Extra Tasks that Use Water:</label>
+        <input type="text" id="extra-tasks"><br><br>
+
+    </form>
+
+
+
+            <button type="button" id="calculate-btn">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </section>
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>
