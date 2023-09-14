@@ -13,21 +13,61 @@
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        /* header {
+        padding: 10px; 
+        display: flex; 
+        align-items: center; 
+        }
+
+        .logo {
+            margin-left: auto; 
+        }
+
+        .logo img {
+            max-width: 100%;
+        }
+        h1{
+            text-align: center;
+            margin-left: 537px;
+        } */
+        ul li a img{
+            width: 50px;
+            height: 50px;
+        }
+        #abt{
+            margin-top: 15px;
+            margin-left: 10px;
+            
+        }
+        #methods{
+            margin-top: 15px;
+        }
+        #footer{
+            margin-top: 15px;
+        }
+        #knw{
+            margin-top: 15px;
+        }
+    
+    </style>
 </head>
 <body>
 
     <div id="google_translate_element"></div>
-    <header>
+    <header class="fix">
+        <!-- <img src="https://thumbs.dreamstime.com/b/water-waves-wave-banner-background-texture-blue-water-waves-wave-banner-background-blue-104909104.jpg" alt=""> -->
         <h1>Water Footprint Calculator</h1>
+        
     </header>
-    <nav>
+    
+    <nav class="fix">
         <ul class="navbar">
-            <div class="logo">
-                <img src="icon_for_a_water_footprint_cal.jpeg" alt="Logo">
-            </div>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Methods</a></li>
+            <li><a href="index.html"><img src="icon_for_a_water_footprint_cal.jpeg" alt="Logo"></a></li>
+            <li id="abt"><a target="_blank" href="aboutUs.html">About Us</a></li>
+            <li id="methods"><a target="_blank" href="#">Methods</a></li>
+            <li id="footer"><a target="_blank" href="#">Support</a></li>
+            <li id="knw"><a target="_blank" href="https://jaljeevanmission.gov.in/">Know More</a></li>
         </ul>
     </nav>
 
@@ -57,6 +97,9 @@
             <div id="result"></div>
         </section>
     </main>
-   
+   <footer id="footer">
+    <p>We should add our team members details here.</p>
+    <address>&copy; 2021, Jaljeevan Mission Foundation</address>
+   </footer>
 </body>
 </html>
