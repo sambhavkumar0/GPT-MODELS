@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const calculateBtn = document.getElementById("calculate-btn");
-    const stateInput = document.getElementById("state");
-    const waterConsumptionInput = document.getElementById("water-consumption");
-    const showerTimeInput = document.getElementById("shower-time");
+    const calculateBtn = document.getElementById("shower");
+    const stateInput = document.getElementById("flush");
+    const waterConsumptionInput = document.getElementById("dishwasher");
+    const showerTimeInput = document.getElementById("laundry");
     const dietDropdown = document.getElementById("diet");
-    const extraTasksInput = document.getElementById("extra-tasks");
+    const extraTasksInput = document.getElementById("local");
     const resultDiv = document.getElementById("result");
 
     calculateBtn.addEventListener("click", function () {
@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
 // Event listener for the Calculate button
 const calculateBtn = document.getElementById('calculate-btn');
 calculateBtn.addEventListener('click', updateResult);
@@ -51,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
 
 
 
