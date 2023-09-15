@@ -17,15 +17,30 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
+  
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var nav = document.getElementById("mynav");
+    var sticky = nav.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+    </script>
 <body>
 
     <div id="google_translate_element"></div>
-        
-    </header>
+  
+    
 
-    <nav class="fix fixed-top">
+    <nav class="fix fixed-top" id="mynav">
         <h1 style="text-align: center; color: white; padding: 10px;">Water Footprint Calculator</h1>
-    <nav>
+
 
         <ul class="navbar">
             <div class="logo">
@@ -81,8 +96,7 @@
             <div id="result"></div>
         </section>
     </main>   
-<!-- </body>
-<body> -->
+
     <footer>
     <div class="footerContainer">
         <div class="socialIcons">
