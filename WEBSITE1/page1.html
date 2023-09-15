@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculate!!</title>
+    <link rel="stylesheet" type="text/css" href="page11.css">
+
 </head>
 <body>
     <main>
@@ -51,25 +53,32 @@
             <button type="button" id="display-btn">Display Selected State</button>
         </form>
     
-        <div id="selected-state"></div>           
-        <label for="state">Your State:</label>
-        <input type="text" id="state" required><br><br>
-
-        <label for="water-consumption">Liters of Water Consumed in a Day:</label>
-        <input type="number" id="water-consumption" required><br><br>
-
-        <label for="shower-time">Time Spent in Showers and Bathrooms (minutes):</label>
-        <input type="number" id="shower-time" required><br><br>
-
-        <label for="diet">Type of Diet:</label>
-        <select id="diet">
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-            <option value="omnivore">Omnivore</option>
-        </select><br><br>
-
-        <label for="extra-tasks">Extra Tasks that Use Water:</label>
-        <input type="text" id="extra-tasks"><br><br>
+        <form id="waterFootprintForm">
+            <label for="shower">Time spent in the shower (minutes per day):</label>
+            <input type="number" id="shower" name="shower" min="0" step="1" required><br><br>
+    
+            <label for="flush">Toilet flushes per day:</label>
+            <input type="number" id="flush" name="flush" min="0" step="1" required><br><br>
+    
+            <label for="dishwasher">Dishwasher usage (number of loads per week):</label>
+            <input type="number" id="dishwasher" name="dishwasher" min="0" step="1" required><br><br>
+    
+            <label for="laundry">Laundry machine usage (number of loads per week):</label>
+            <input type="number" id="laundry" name="laundry" min="0" step="1" required><br><br>
+    
+            <label for="diet">Diet (average diet water footprint, in liters per day):</label>
+            <input type="number" id="diet" name="diet" min="0" step="0.01" required><br><br>
+    
+            <label for="local">Local water availability (liters per day):</label>
+            <input type="number" id="local" name="local" min="0" step="0.01" required><br><br>
+    
+            <button type="button" onclick="calculateWaterFootprint()">Calculate</button>
+        </form>
+    
+        <h2>Result:</h2>
+        <p>Your estimated daily water footprint is: <span id="result">-</span> liters.</p>
+    
+       
 
     </form>
 
@@ -80,7 +89,8 @@
         <div id="result"></div>
     </section>
 </main>
-
     <script src="script.js"></script>
+     <script>document.getElementById("button").addEventListener("click",calculateWaterFootprint);</script>
+    
 </body>
 </html>
