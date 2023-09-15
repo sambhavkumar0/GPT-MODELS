@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Water Footprint Calculator</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -55,13 +57,14 @@
 <body>
 
     <div id="google_translate_element"></div>
-    <header class="fix">
+    <!-- <header class="fix fixed-top"> -->
         <!-- <img src="https://thumbs.dreamstime.com/b/water-waves-wave-banner-background-texture-blue-water-waves-wave-banner-background-blue-104909104.jpg" alt=""> -->
-        <h1>Water Footprint Calculator</h1>
+        
         
     </header>
-    
-    <nav class="fix">
+
+    <nav class="fix fixed-top">
+        <h1 style="text-align: center;">Water Footprint Calculator</h1>
         <ul class="navbar">
             <li><a href="index.html"><img src="icon_for_a_water_footprint_cal.jpeg" alt="Logo"></a></li>
             <li id="abt"><a target="_blank" href="aboutUs.html">About Us</a></li>
@@ -71,23 +74,39 @@
         </ul>
     </nav>
 
-    <div class="message">
-        <img src="water-usage-image.jpg" alt="Water Usage">
-        <h2>Water Usage</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit sed sapien faucibus rhoncus.</p>
-    </div>
-
-    <div class="message">
-        <img src="water-conservation-image.jpg" alt="Water Conservation">
-        <h2>Water Conservation</h2>
-        <p>Proin vel nunc eu nisi tristique tincidunt. Suspendisse potenti. Vivamus vel ex non purus auctor aliquet.</p>
-    </div>
-
-    <div class="message">
-        <img src="water-tips-image.jpg" alt="Water Conservation Tips">
-        <h2>Water Conservation Tips</h2>
-        <p>Etiam quis dolor quis elit laoreet viverra. Sed malesuada tortor sit amet suscipit ultrices.</p>
-    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.bhaskarassets.com/web2images/521/2019/11/07/0521_water_conservation.jpg" class="d-block" height="750" width="1550">
+           <div class="carousel-caption">
+           <a href="divConnect1.html" target="_blank"><p style="color:blue" ><b>BASICS OF WATER FOOTPRINT</b></p></a><br>
+           </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://th.bing.com/th/id/R.ccd40fc227469c24c1a23210362a6768?rik=3ZwUOHlcArrG4g&riu=http%3a%2f%2fyesofcorsa.com%2fwp-content%2fuploads%2f2016%2f12%2fWater-4K-Wallpaper-For-Android.jpg&ehk=9INgG%2f%2fyvrQb98585pyXvGVLz415k%2bh0%2fUONeudgSVM%3d&risl=&pid=ImgRaw&r=0" class="d-block" height="750" width="1550">
+      <div class="carousel-caption">
+           <a target="_blank" href="divConnect2.html" ><p style="color: aquamarine;"><b>TEACHING ABOUT WATER FOOTPRINT</b></p></a><br>
+      </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/1240172/pexels-photo-1240172.png?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" class="d-block" height="750" width="1550">
+      <div class="carousel-caption">
+           <a href="divConnect3.html" target="_blank" ><p style="color: aquamarine;"><b>HOW TO SAVE WATER<b></p></a><br>
+      </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     <main>
         <section id="calculator">
             <h2>Calculate Your Water Footprint</h2>

@@ -116,3 +116,8 @@ nav {
     color: #666;
     font-size: 16px;
 }
+.carousel-caption{
+    top: 60%; 
+    color:white; 
+    font-size:30px; 
+}
