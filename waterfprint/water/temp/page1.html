@@ -92,10 +92,18 @@
 </head>
 
 <body>
+
     <main>
+       
+       
+
+      
+
         <section id="calculator">
             <h2>Calculate Your Water Footprint</h2>
-            <form id="calculator-form" method="POST" action="submit">
+            
+            <form id="calculator-form" method="POST" >
+                {% csrf_token %}
 
                 <label for="state-dropdown">Select an Indian State:</label>
                 <select id="state-dropdown" name="state">
@@ -134,20 +142,20 @@
                     <option value="32">Delhi</option>
                     <option value="33">Puducherry</option>
                 </select>
-                
+
 
 
                 <form id="waterFootprintForm">
                     <label for="shower">Time spent in the shower (minutes per day):</label>
-                    <input type="number" id="shower" name="shower" min="0" step="1" name="timespent" required ><br><br>
+                    <input type="number" id="shower" name="shower" min="0" step="1" name="timespent" required><br><br>
 
                     <label for="flush">Toilet flushes per day:</label>
-                    <input type="number" id="flush" name="flush" min="0" step="1"  required><br><br>
+                    <input type="number" id="flush" name="flush" min="0" step="1" required><br><br>
 
-                    <label for="dishwasher">Dishwasher usage (number of loads per week):</label>
+                    <label for="dishwasher">Dishwasher usage (number of loads per day):</label>
                     <input type="number" id="dishwasher" name="dishwasher" min="0" step="1" required><br><br>
 
-                    <label for="laundry">Laundry machine usage (number of loads per week):</label>
+                    <label for="laundry">Laundry machine usage (number of loads per day):</label>
                     <input type="number" id="laundry" name="laundry" min="0" step="1" required><br><br>
 
                     <label for="diet">Diet (average diet water footprint, in liters per day):</label>
@@ -156,23 +164,14 @@
                     <label for="local">Local water availability (liters per day):</label>
                     <input type="number" id="local" name="local" min="0" step="0.01" required><br><br>
 
-                    <button type="button" onclick="calculateWaterFootprint()">Calculate</button>
+                    <button type="submit">Calculate</button>
                 </form>
             </form>
 
-            <h2>Result:</h2>
-            <p>Your estimated daily water footprint is: <span id="result">-</span> liters.</p>
 
 
-
-
-
-
-
-            <button type="button" id="calculate-btn">Calculate</button>
-            </form>
-            <div id="result"></div>
         </section>
+        
     </main>
     <script src="script.js"></script>
     <script>document.getElementById("button").addEventListener("click", calculateWaterFootprint);</script>
