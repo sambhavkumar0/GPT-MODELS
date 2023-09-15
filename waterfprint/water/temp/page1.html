@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate!!</title>
+    <link rel="stylesheet" type="text/css" href="page11.css">
+    <style>
+        /* Reset some default styles */
+        body,
+        html,
+        h1,
+        p,
+        form,
+        input,
+        label,
+        button {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3fa4df;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #0074e4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0054b0;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section id="calculator">
+            <h2>Calculate Your Water Footprint</h2>
+            <form id="calculator-form" method="POST" action="submit">
+
+                <label for="state-dropdown">Select an Indian State:</label>
+                <select id="state-dropdown" name="state">
+                    <option value="0">Andhra Pradesh</option>
+                    <option value="1">Arunachal Pradesh</option>
+                    <option value="2">Assam</option>
+                    <option value="3">Bihar</option>
+                    <option value="4">Chhattisgarh</option>
+                    <option value="5">Goa</option>
+                    <option value="6">Gujarat</option>
+                    <option value="7">Haryana</option>
+                    <option value="8">Himachal Pradesh</option>
+                    <option value="9">Jharkhand</option>
+                    <option value="10">Karnataka</option>
+                    <option value="11">Kerala</option>
+                    <option value="12">Madhya Pradesh</option>
+                    <option value="13">Maharashtra</option>
+                    <option value="14">Manipur</option>
+                    <option value="15">Meghalaya</option>
+                    <option value="16">Mizoram</option>
+                    <option value="17">Nagaland</option>
+                    <option value="18">Odisha</option>
+                    <option value="19">Punjab</option>
+                    <option value="20">Rajasthan</option>
+                    <option value="21">Sikkim</option>
+                    <option value="22">Tamil Nadu</option>
+                    <option value="23">Telangana</option>
+                    <option value="24">Tripura</option>
+                    <option value="25">Uttar Pradesh</option>
+                    <option value="26">Uttarakhand</option>
+                    <option value="27">West Bengal</option>
+                    <option value="28">Andaman and Nicobar Islands</option>
+                    <option value="29">Chandigarh</option>
+                    <option value="30">Dadra and Nagar Haveli and Daman and Diu</option>
+                    <option value="31">Lakshadweep</option>
+                    <option value="32">Delhi</option>
+                    <option value="33">Puducherry</option>
+                </select>
+                
+
+
+                <form id="waterFootprintForm">
+                    <label for="shower">Time spent in the shower (minutes per day):</label>
+                    <input type="number" id="shower" name="shower" min="0" step="1" name="timespent" required ><br><br>
+
+                    <label for="flush">Toilet flushes per day:</label>
+                    <input type="number" id="flush" name="flush" min="0" step="1"  required><br><br>
+
+                    <label for="dishwasher">Dishwasher usage (number of loads per week):</label>
+                    <input type="number" id="dishwasher" name="dishwasher" min="0" step="1" required><br><br>
+
+                    <label for="laundry">Laundry machine usage (number of loads per week):</label>
+                    <input type="number" id="laundry" name="laundry" min="0" step="1" required><br><br>
+
+                    <label for="diet">Diet (average diet water footprint, in liters per day):</label>
+                    <input type="number" id="diet" name="diet" min="0" step="0.01" required><br><br>
+
+                    <label for="local">Local water availability (liters per day):</label>
+                    <input type="number" id="local" name="local" min="0" step="0.01" required><br><br>
+
+                    <button type="button" onclick="calculateWaterFootprint()">Calculate</button>
+                </form>
+            </form>
+
+            <h2>Result:</h2>
+            <p>Your estimated daily water footprint is: <span id="result">-</span> liters.</p>
+
+
+
+
+
+
+
+            <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>document.getElementById("button").addEventListener("click", calculateWaterFootprint);</script>
+
+</body>
+
+</html>
